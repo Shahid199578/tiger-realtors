@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="logoGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="40%" stop-color="#F59E0B" />
+      <stop offset="80%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+    <linearGradient id="logoNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+  </defs>
+
+  <!-- ICON (Left) -->
+  <g transform="translate(10, 8)">
+    <rect x="0" y="0" width="84" height="84" rx="22" fill="url(#logoNavy)" stroke="url(#logoGold)" stroke-width="2.5" />
+    <path d="M42 14 L70 30 L65 37 L42 24 L19 37 L14 30 Z" fill="url(#logoGold)" />
+    <path d="M38 28 H46 V72 H38 Z" fill="url(#logoGold)" />
+    <path d="M22 42 L34 35 L34 43 L25 49 Z" fill="url(#logoGold)" opacity="0.9" />
+    <path d="M23 54 L34 47 L34 55 L27 61 Z" fill="url(#logoGold)" opacity="0.8" />
+    <path d="M62 42 L50 35 L50 43 L59 49 Z" fill="url(#logoGold)" opacity="0.9" />
+    <path d="M61 54 L50 47 L50 55 L57 61 Z" fill="url(#logoGold)" opacity="0.8" />
+    <polygon points="42,10 44.5,14 42,18 39.5,14" fill="#FDE68A" />
+    <rect x="30" y="71" width="24" height="3" rx="1.5" fill="url(#logoGold)" />
+  </g>
+
+  <!-- TYPOGRAPHY (Right) -->
+  <g transform="translate(115, 20)">
+    <!-- TIGER -->
+    <text x="0" y="38" font-family="'Playfair Display', Georgia, serif" font-size="38" font-weight="800" letter-spacing="1" fill="#0F172A">
+      TIGER
+    </text>
+
+    <!-- REALTORS -->
+    <text x="135" y="38" font-family="'Inter', sans-serif" font-size="34" font-weight="900" letter-spacing="2" fill="url(#logoGold)">
+      REALTORS
+    </text>
+
+    <!-- Thin Divider -->
+    <line x1="0" y1="48" x2="310" y2="48" stroke="url(#logoGold)" stroke-width="1.5" opacity="0.7" />
+
+    <!-- SUBTITLE -->
+    <text x="2" y="66" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" letter-spacing="4" fill="#64748B">
+      GAUR CITY • SECTOR 4 • NOIDA EXTENSION
+    </text>
+  </g>
+</svg>

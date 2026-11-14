@@ -1,0 +1,34 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <defs>
+    <linearGradient id="favGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="40%" stop-color="#F59E0B" />
+      <stop offset="80%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+    <linearGradient id="favNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+  </defs>
+
+  <rect x="4" y="4" width="92" height="92" rx="24" fill="url(#favNavy)" stroke="url(#favGold)" stroke-width="3" />
+  
+  <!-- Roof Apex ("T" crossbar) -->
+  <path d="M50 16 L82 34 L76 42 L50 27 L24 42 L18 34 Z" fill="url(#favGold)" />
+  
+  <!-- Center Pillar Spine -->
+  <path d="M45 32 H55 V82 H45 Z" fill="url(#favGold)" />
+
+  <!-- Architectural Wings / Stripes -->
+  <path d="M26 48 L40 40 L40 49 L30 56 Z" fill="url(#favGold)" opacity="0.9" />
+  <path d="M28 62 L40 54 L40 63 L32 70 Z" fill="url(#favGold)" opacity="0.8" />
+  <path d="M74 48 L60 40 L60 49 L70 56 Z" fill="url(#favGold)" opacity="0.9" />
+  <path d="M72 62 L60 54 L60 63 L68 70 Z" fill="url(#favGold)" opacity="0.8" />
+
+  <!-- Crown Diamond -->
+  <polygon points="50,11 53,16 50,21 47,16" fill="#FDE68A" />
+
+  <!-- Base Bar -->
+  <rect x="36" y="81" width="28" height="3.5" rx="1.5" fill="url(#favGold)" />
+</svg>
