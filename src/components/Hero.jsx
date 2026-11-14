@@ -9,8 +9,8 @@ const heroSlides = [
   },
   {
     image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=80",
-    title: "Turnkey Luxury Interior Design",
-    subtitle: "Transform your apartment with bespoke modular kitchens, designer false ceilings, architectural lighting, and quality craftsmanship."
+    title: "Turnkey Interior & Support",
+    subtitle: "Transform your apartment with modular kitchens, designer false ceilings, modern lighting, painting, and complete execution support."
   },
   {
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80",
@@ -35,7 +35,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden pt-20 sm:pt-24 pb-12 sm:pb-16">
+    <section id="home" className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden pt-24 sm:pt-28 pb-12 sm:pb-16">
       {/* Background Carousel */}
       {heroSlides.map((slide, index) => (
         <div
@@ -72,9 +72,10 @@ export default function Hero() {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center text-white mt-4 sm:mt-6">
         
         {/* Gaur City Value Badge */}
-        <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-amber-500/20 to-blue-500/20 border border-amber-400/40 rounded-full px-3 sm:px-4 py-1 text-[11px] sm:text-xs md:text-sm font-semibold tracking-wide text-amber-300 backdrop-blur-md mb-4 sm:mb-6 animate-pulse">
+        <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-amber-500/15 via-blue-500/10 to-amber-500/15 border border-amber-400/40 rounded-full px-3.5 sm:px-4 py-1.5 text-[11px] sm:text-xs md:text-sm font-semibold tracking-wide text-amber-300 backdrop-blur-md mb-4 sm:mb-6 shadow-sm shadow-amber-950/20 max-w-full">
           <Building className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400 shrink-0" />
-          <span>#1 Trusted Property Advisor • Gaur City & Greater Noida West</span>
+          <span className="sm:hidden whitespace-nowrap">#1 Trusted Property Advisor • Gaur City</span>
+          <span className="hidden sm:inline whitespace-nowrap">#1 Trusted Property Advisor • Gaur City & Greater Noida West</span>
         </div>
 
         {/* Dynamic Heading */}
