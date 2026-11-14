@@ -72,10 +72,10 @@ export default function Hero() {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center text-white mt-4 sm:mt-6">
         
         {/* Gaur City Value Badge */}
-        <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-amber-500/15 via-blue-500/10 to-amber-500/15 border border-amber-400/40 rounded-full px-3.5 sm:px-4 py-1.5 text-[11px] sm:text-xs md:text-sm font-semibold tracking-wide text-amber-300 backdrop-blur-md mb-4 sm:mb-6 shadow-sm shadow-amber-950/20 max-w-full">
+        <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-amber-500/15 via-blue-500/10 to-amber-500/15 border border-amber-400/40 rounded-full px-3 sm:px-4 py-1.5 text-[10px] xs:text-[11px] sm:text-xs md:text-sm font-semibold tracking-wide text-amber-300 backdrop-blur-md mb-4 sm:mb-6 shadow-sm shadow-amber-950/20 max-w-full">
           <Building className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400 shrink-0" />
-          <span className="sm:hidden whitespace-nowrap">#1 Trusted Property Advisor • Gaur City</span>
-          <span className="hidden sm:inline whitespace-nowrap">#1 Trusted Property Advisor • Gaur City & Greater Noida West</span>
+          <span className="sm:hidden whitespace-nowrap">Most Trusted Property Advisor • Gaur City</span>
+          <span className="hidden sm:inline whitespace-nowrap">Most Trusted Property Advisor • Gaur City & Greater Noida West</span>
         </div>
 
         {/* Dynamic Heading */}
