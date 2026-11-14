@@ -6,11 +6,8 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# SPA Routing: Redirect all client-side routes to index.html
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Every page is prerendered to its own HTML file (scripts/prerender.js), so there is no SPA
+# catch-all rewrite. Unknown URLs get dist/404.html with a real 404 status instead of a soft 404.
 
 # Security & Best-Practice HTTP Headers
 [[headers]]

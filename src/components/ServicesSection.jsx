@@ -1,6 +1,6 @@
 import React from 'react';
 import { Home, Key, Palette, Wrench, CheckCircle2, MessageCircle, ArrowRight } from 'lucide-react';
-import { servicesData } from '../data/services';
+import { servicesData, servicePath } from '../data/services';
 
 const iconMap = {
   Home: Home,
@@ -29,7 +29,7 @@ export default function ServicesSection() {
 
         {/* 4 Cards Grid - Responsive from 1 col on mobile, 2 cols on tablet, 4 cols on desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-          {servicesData.map((service) => {
+          {servicesData.filter((service) => service.homeCard !== false).map((service) => {
             const Icon = iconMap[service.icon] || Home;
             return (
               <div
@@ -66,8 +66,15 @@ export default function ServicesSection() {
                   </div>
                 </div>
 
-                {/* Bottom WhatsApp CTA Button */}
-                <div className="mt-6 sm:mt-8 pt-4 border-t border-slate-100">
+                {/* Bottom CTAs: service page + WhatsApp */}
+                <div className="mt-6 sm:mt-8 pt-4 border-t border-slate-100 space-y-2">
+                  <a
+                    href={servicePath(service)}
+                    className="w-full flex items-center justify-center gap-1.5 text-xs font-bold text-blue-600 hover:text-blue-700 py-1.5"
+                  >
+                    <span>Learn more about {service.title.toLowerCase()}</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
                   <a
                     href={`https://wa.me/+918743910094?text=${encodeURIComponent(service.whatsappMsg)}`}
                     target="_blank"
@@ -83,6 +90,13 @@ export default function ServicesSection() {
             );
           })}
         </div>
+
+        <p className="mt-8 text-center text-xs sm:text-sm text-slate-600">
+          Looking for a shop or office?{' '}
+          <a href="/services/commercial-property/" className="font-bold text-blue-600 hover:text-blue-700 hover:underline">
+            Commercial property in Gaur City &amp; Galaxy Plaza &rarr;
+          </a>
+        </p>
 
       </div>
     </section>

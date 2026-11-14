@@ -44,6 +44,20 @@ A modern, high-performance web application for **Tiger Realtors**, the trusted r
 
 ---
 
+## 🔎 Pages, SEO & Prerendering
+
+Every page is rendered to static HTML at build time (`scripts/prerender.js`), so search engines and WhatsApp/social previews see full content and per-page meta without running JavaScript. React then hydrates the page in the browser.
+
+- **Add or edit a service page**: `src/data/services.js` → served at `/services/<slug>/`
+- **Add or edit a guide**: `src/data/guides.js` → served at `/guides/<slug>/`
+- **Home page FAQs**: `src/data/faqs.js`
+- **Business details (NAP) and schema**: `src/data/site.js`
+- **Route list, titles and JSON-LD**: `src/routes.jsx`
+
+`sitemap.xml` and `404.html` are generated automatically from the route list on every build, so do not add them to `public/`.
+
+---
+
 ## 🌐 Netlify Deployment Guide
 
 This project is configured for one-click deployment on **Netlify** with custom domain support for `tigerrealtors.in`.

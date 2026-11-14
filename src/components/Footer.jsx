@@ -1,6 +1,8 @@
 import React from 'react';
 import { Phone, Mail, MessageCircle } from 'lucide-react';
 import Logo from './Logo';
+import { servicesData, servicePath } from '../data/services';
+import { guidesData, guidePath } from '../data/guides';
 
 export default function Footer() {
   return (
@@ -92,10 +94,13 @@ export default function Footer() {
                 Navigation
               </h4>
               <ul className="space-y-2 text-xs">
-                <li><a href="#home" className="hover:text-amber-400 transition-colors">Home</a></li>
-                <li><a href="#services" className="hover:text-amber-400 transition-colors">Services</a></li>
-                <li><a href="#about" className="hover:text-amber-400 transition-colors">About Us</a></li>
-                <li><a href="#contact" className="hover:text-amber-400 transition-colors">Contact</a></li>
+                <li><a href="/" className="hover:text-amber-400 transition-colors">Home</a></li>
+                <li><a href="/#about" className="hover:text-amber-400 transition-colors">About Us</a></li>
+                <li><a href="/guides/" className="hover:text-amber-400 transition-colors">Property Guides</a></li>
+                {guidesData.map((guide) => (
+                  <li key={guide.slug}><a href={guidePath(guide)} className="hover:text-amber-400 transition-colors">{guide.title.split(':')[0]}</a></li>
+                ))}
+                <li><a href="/#contact" className="hover:text-amber-400 transition-colors">Contact</a></li>
               </ul>
             </div>
 
@@ -105,10 +110,9 @@ export default function Footer() {
                 Our Services
               </h4>
               <ul className="space-y-2 text-xs">
-                <li><a href="#services" className="hover:text-amber-400 transition-colors">Property Sales</a></li>
-                <li><a href="#services" className="hover:text-amber-400 transition-colors">Property Rentals</a></li>
-                <li><a href="#services" className="hover:text-amber-400 transition-colors">Interior Design</a></li>
-                <li><a href="#services" className="hover:text-amber-400 transition-colors">Property Maintenance</a></li>
+                {servicesData.map((service) => (
+                  <li key={service.id}><a href={servicePath(service)} className="hover:text-amber-400 transition-colors">{service.title}</a></li>
+                ))}
               </ul>
             </div>
           </div>

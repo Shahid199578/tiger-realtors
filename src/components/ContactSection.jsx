@@ -38,6 +38,10 @@ export default function ContactSection() {
 • Service Needed: ${serviceLabels[formData.service] || formData.service}
 • Requirement: ${formData.message.trim() || 'Please share available options.'}`;
 
+    // Lead event for Google Tag Manager (GTM-W7W8993S). Only the service type is sent, never name or phone.
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'lead_form_submit', service_type: formData.service });
+
     window.open(`https://wa.me/+918743910094?text=${encodeURIComponent(text)}`, '_blank');
 
     setSubmitted(true);

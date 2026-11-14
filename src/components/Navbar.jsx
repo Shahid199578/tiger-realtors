@@ -27,10 +27,11 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/#services' },
+    { name: 'Guides', href: '/guides/' },
+    { name: 'About', href: '/#about' },
+    { name: 'Contact', href: '/#contact' },
   ];
 
   return (
@@ -45,7 +46,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between gap-2 sm:gap-4">
 
           {/* Logo */}
-          <a href="#home" className="shrink-0 max-w-[210px] xs:max-w-none transition-transform hover:opacity-95">
+          <a href="/" aria-label="Tiger Realtors home" className="shrink-0 max-w-[210px] xs:max-w-none transition-transform hover:opacity-95">
             <Logo light={!isScrolled} />
           </a>
 
