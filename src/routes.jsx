@@ -4,6 +4,7 @@ import ServicePage from './pages/ServicePage';
 import GuidesIndexPage from './pages/GuidesIndexPage';
 import GuidePage from './pages/GuidePage';
 import NotFoundPage from './pages/NotFoundPage';
+import PrivacyPage from './pages/PrivacyPage';
 import { servicesData, servicePath } from './data/services';
 import { guidesData, guidePath } from './data/guides';
 import { homeFaqs } from './data/faqs';
@@ -84,6 +85,15 @@ export const routes = [
       render: () => <GuidePage guide={guide} crumbs={crumbs} />,
     };
   }),
+  {
+    path: '/privacy/',
+    title: 'Privacy Policy | Tiger Realtors',
+    description:
+      'How Tiger Realtors collects, uses and protects your information, including the WhatsApp enquiry form, cookies, Google Analytics and Google AdSense advertising.',
+    priority: '0.3',
+    schema: [breadcrumbSchema([home, { name: 'Privacy Policy', path: '/privacy/' }])],
+    render: () => <PrivacyPage crumbs={[home, { name: 'Privacy Policy', path: '/privacy/' }]} />,
+  },
 ];
 
 export const notFoundRoute = {

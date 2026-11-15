@@ -130,6 +130,8 @@ export default function Footer() {
         <div className="mt-4 pt-4 border-t border-slate-800/50 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-xs">
           <p className="text-slate-400">
             © 2025 Tiger Realtors Gaur City. All rights reserved.
+            <span className="mx-2">&middot;</span>
+            <a href="/privacy/" className="hover:text-amber-400 transition-colors">Privacy Policy</a>
           </p>
 
           <div className="flex items-center gap-2 text-slate-400">
